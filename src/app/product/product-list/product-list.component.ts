@@ -3,6 +3,8 @@ import {ProductService} from "../product.service";
 import {Product} from "../../models/product";
 import {MatCardModule} from '@angular/material/card';
 import {CurrencyPipe, NgForOf} from "@angular/common";
+import { FlexModule} from "@angular/flex-layout";
+
 
 @Component({
   selector: 'app-product-list',
@@ -10,7 +12,8 @@ import {CurrencyPipe, NgForOf} from "@angular/common";
   imports: [
     MatCardModule,
     NgForOf,
-    CurrencyPipe
+    CurrencyPipe,
+    FlexModule
   ],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
