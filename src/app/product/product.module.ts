@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import {MatCardModule} from '@angular/material/card';
+import {NgForOf} from "@angular/common";
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatCardModule,
+    NgForOf
   ]
 })
 export class ProductModule { }
