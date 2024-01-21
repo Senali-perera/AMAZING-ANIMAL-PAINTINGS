@@ -1,14 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import {CartService} from "../cart.service";
 import {Product} from "../../models/product";
-import {MatCardModule} from "@angular/material/card";
-import {MatListModule} from "@angular/material/list";
+import {MatCard, MatCardModule} from "@angular/material/card";
+import {MatList, MatListModule} from "@angular/material/list";
 import {MatButtonModule} from "@angular/material/button";
+import {CurrencyPipe, NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-cart-view',
   standalone: true,
-  imports: [],
+  imports: [
+    MatCard,
+    MatList,
+    MatListModule,
+    CurrencyPipe,
+    NgForOf
+  ],
   templateUrl: './cart-view.component.html',
   styleUrl: './cart-view.component.css'
 })
