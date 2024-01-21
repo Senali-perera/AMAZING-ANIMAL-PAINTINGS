@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CartService} from "../cart.service";
 import {Product} from "../../models/product";
-import {MatCard, MatCardModule} from "@angular/material/card";
+import {MatCardModule} from "@angular/material/card";
 import {MatList, MatListModule} from "@angular/material/list";
 import {MatButtonModule} from "@angular/material/button";
 import {CurrencyPipe, NgForOf} from "@angular/common";
@@ -10,7 +10,7 @@ import {CurrencyPipe, NgForOf} from "@angular/common";
   selector: 'app-cart-view',
   standalone: true,
   imports: [
-    MatCard,
+    MatCardModule,
     MatList,
     MatListModule,
     CurrencyPipe,
