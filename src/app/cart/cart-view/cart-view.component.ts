@@ -14,7 +14,8 @@ import {CurrencyPipe, NgForOf} from "@angular/common";
     MatList,
     MatListModule,
     CurrencyPipe,
-    NgForOf
+    NgForOf,
+    MatButtonModule
   ],
   templateUrl: './cart-view.component.html',
   styleUrl: './cart-view.component.css'
@@ -40,5 +41,13 @@ export class CartViewComponent implements OnInit {
       total += item.price;
     }
     return total;
+  }
+
+  clearCart():void{
+    this.cartService.clearCart().subscribe();
+  }
+
+  checkout():void{
+    this.cartService.checkout(this.cartItems).subscribe();
   }
 }
