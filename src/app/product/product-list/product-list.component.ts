@@ -6,6 +6,7 @@ import {CurrencyPipe, NgForOf} from "@angular/common";
 import { FlexModule } from "@angular/flex-layout";
 import {CartService} from "../../cart/cart.service";
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {MatInputModule} from '@angular/material/input';
 
 
 @Component({
@@ -15,7 +16,8 @@ import {MatSnackBar} from '@angular/material/snack-bar';
     MatCardModule,
     NgForOf,
     CurrencyPipe,
-    FlexModule
+    FlexModule,
+    MatInputModule
   ],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
@@ -33,6 +35,7 @@ export class ProductListComponent implements OnInit{
   ngOnInit() {
     this.productService.getProducts().subscribe(data =>{
       this.products = data;
+      this.filteredProducts = data;
     });
   }
 
